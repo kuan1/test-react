@@ -9,3 +9,5 @@ const a = '1' as any as number
 function test(a?: string) {
   return a!.slice()
 }
+
+export {}

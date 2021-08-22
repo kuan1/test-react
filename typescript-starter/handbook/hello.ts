@@ -25,3 +25,5 @@ const user: Person = { name: 'kuan1', age: 27 }
 greeter(new Student('kuan1', 20))
 
 document.body.textContent = greeter(user)
+
+export {}
