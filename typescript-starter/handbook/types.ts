@@ -33,6 +33,7 @@ type PropEventSource<Type> = {
 // 指定类型
 const canvas = <HTMLCanvasElement>document.querySelector('canvas')
 const canvas2 = document.querySelector('canvas') as HTMLCanvasElement
+const canvas3 = <HTMLCanvasElement>document.querySelector('canvas')!
 
 // 强制制定类型
 const a = '1' as any as number
