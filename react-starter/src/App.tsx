@@ -1,18 +1,46 @@
-import React from 'react';
-import logo from './logo.svg';
-import Counter from './components/Counter'
-import './App.css';
+import React, {FunctionComponent} from 'react'
+import {HashRouter as Router, Switch, Route, Link} from 'react-router-dom'
 
-function App() {
+import Home from './components/Home'
+import Test from './components/Test'
+
+const routes = [
+  {
+    name: '首页',
+    path: '/',
+    component: Home
+  },
+  {
+    name: '测试',
+    path: '/test',
+    component: Test
+  }
+]
+
+const App:FunctionComponent<{}> = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter defaultValue={10} />
-        {/* <Counter /> */}
-      </header>
-    </div>
-  );
+    <Router>
+      {/* 导航 */}
+      <div className="nav-wrap">
+        {routes.map(route => (
+          <Link key={route.path} to={route.path}>
+            <button>{route.name}</button>
+          </Link>
+        ))}
+      </div>
+
+      {/* 路由 */}
+      <Switch>
+        {
+          routes.map(route => (
+            <Route exact key={route.path} path={route.path}>
+              {route.component}
+            </Route>
+          ))
+        }
+      </Switch>
+    </Router>
+  )
 }
 
-export default App;
+export default App
