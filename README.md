@@ -4,4 +4,4 @@
 
 ### 学习进度
 
-- [ ] typescript-starter
+- [ x ] typescript-starter
