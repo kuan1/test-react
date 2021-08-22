@@ -1,11 +1,11 @@
-import {useState} from 'react'
+import {useState, FunctionComponent} from 'react'
 
 interface Props {
   defaultValue:number
 }
 
-export default function Counter(props: Props) {
-  const [count, setCount] = useState<number>(props.defaultValue)
+const Counter:FunctionComponent<Partial<Props>> = (props) => {
+  const [count, setCount] = useState<number>(props.defaultValue!)
   return (
     <div>
       <button onClick={() => setCount(count + 1)}>点击次数{count}</button>
@@ -16,3 +16,5 @@ export default function Counter(props: Props) {
 Counter.defaultProps = {
   defaultValue: 1
 }
+
+export default Counter

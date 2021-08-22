@@ -9,7 +9,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <Counter defaultValue={10} />
-        <Counter />
+        {/* <Counter /> */}
       </header>
     </div>
   );
