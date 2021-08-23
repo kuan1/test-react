@@ -1,17 +1,17 @@
 import React, {FunctionComponent} from 'react'
 import {HashRouter as Router, Switch, Route, Link} from 'react-router-dom'
 
-import Home from './components/Home'
+import UseState from './components/UseState'
 import Test from './components/Test'
 
 const routes = [
   {
-    name: '首页',
+    name: 'useState',
     path: '/',
-    component: <Home />
+    component: <UseState />
   },
   {
-    name: '测试',
+    name: 'test',
     path: '/test',
     component: <Test />
   }
