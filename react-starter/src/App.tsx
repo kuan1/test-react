@@ -3,12 +3,18 @@ import {HashRouter as Router, Switch, Route, Link} from 'react-router-dom'
 
 import UseState from './components/UseState'
 import Test from './components/Test'
+import UseReducer from './components/UseReducer'
 
 const routes = [
   {
     name: 'useState',
     path: '/',
     component: <UseState />
+  },
+  {
+    name: 'useReducer',
+    path: '/useReducer',
+    component: <div><UseReducer /> <UseReducer/></div>
   },
   {
     name: 'test',
