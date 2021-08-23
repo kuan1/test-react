@@ -5,6 +5,7 @@ import UseState from './components/UseState'
 import Test from './components/Test'
 import UseReducer from './components/UseReducer'
 import UseEffect from './components/UseEffect'
+import UseRef from './components/UseRef'
 
 const routes = [
   {
@@ -21,6 +22,11 @@ const routes = [
     name: 'useEffect',
     path: '/useEffect',
     component: <UseEffect />
+  },
+  {
+    name: 'useRef',
+    path: '/useRef',
+    component: <UseRef />
   },
   {
     name: 'test',
