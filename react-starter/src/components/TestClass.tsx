@@ -27,6 +27,7 @@ export class TestClass extends Component<{}, State> {
 
   render() {
     const {a} = this.state
+
     return (
       <div>
         <h2>test class component</h2>

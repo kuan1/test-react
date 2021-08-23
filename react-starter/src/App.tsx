@@ -1,4 +1,4 @@
-import React, {FunctionComponent} from 'react'
+import React, {FC} from 'react'
 import {HashRouter as Router, Switch, Route, Link} from 'react-router-dom'
 
 import UseState from './components/UseState'
@@ -47,7 +47,7 @@ const routes = [
   }
 ]
 
-const App:FunctionComponent<{}> = () => {
+const App:FC<{}> = () => {
   return (
     <Router>
       {/* 导航 */}
