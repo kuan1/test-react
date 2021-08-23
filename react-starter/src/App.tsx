@@ -4,6 +4,7 @@ import {HashRouter as Router, Switch, Route, Link} from 'react-router-dom'
 import UseState from './components/UseState'
 import Test from './components/Test'
 import UseReducer from './components/UseReducer'
+import UseEffect from './components/UseEffect'
 
 const routes = [
   {
@@ -15,6 +16,11 @@ const routes = [
     name: 'useReducer',
     path: '/useReducer',
     component: <div><UseReducer /> <UseReducer/></div>
+  },
+  {
+    name: 'useEffect',
+    path: '/useEffect',
+    component: <UseEffect />
   },
   {
     name: 'test',
