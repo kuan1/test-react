@@ -7,6 +7,7 @@ import UseReducer from './components/UseReducer'
 import UseEffect from './components/UseEffect'
 import UseRef from './components/UseRef'
 import TestClass from './components/TestClass'
+import CustomHooks from './components/CustomHooks'
 
 const routes = [
   {
@@ -33,6 +34,11 @@ const routes = [
     name: 'testComponent',
     path: '/testComponent',
     component: <TestClass />
+  },
+  {
+    name: 'customHooks',
+    path: '/customHooks',
+    component: <CustomHooks />
   },
   {
     name: 'test',
