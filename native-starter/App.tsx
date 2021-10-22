@@ -1,36 +1,39 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react'
+import { SafeAreaView, View, Text, StyleSheet } from 'react-native'
+import { NativeRouter, Route } from "react-router-native";
 
-export default function App() {
+import NavList from './src/routes/NavList'
+
+import routes from './src/routes'
+
+const App = () => {
   return (
-    <View style={styles.container}>
-      <View style={styles.box}>
-        <Text style={styles.text}>test</Text>
-      </View>
-      <Text>Hello World</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+    <SafeAreaView style={styles.container}>
+      <NativeRouter>
+        <View style={styles.content}>
+          <NavList />
+          {
+            routes.map(item => (
+              <Route key={item.path} exact path={item.path} component={item.component} />
+            ))
+          }
+        </View>
+      </NativeRouter>
+    </SafeAreaView>
+  )
 }
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: 'white',
+    flex: 1
+  },
+  content: {
+    backgroundColor: '#eee',
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  box: {
-    width: '50%',
-    height: '50vw',
-    backgroundColor: 'red',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  text: {
-    color: 'white',
-    fontWeight: 'bold',
-    fontSize: 30
+    padding: 10
   }
-});
+})
+
+
+export default App
