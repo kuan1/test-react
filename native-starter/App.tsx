@@ -1,5 +1,5 @@
 import React from 'react'
-import { SafeAreaView, View, Text, StyleSheet } from 'react-native'
+import { SafeAreaView, View, StyleSheet } from 'react-native'
 import { NativeRouter, Route } from "react-router-native";
 
 import NavList from './src/routes/NavList'
@@ -12,11 +12,13 @@ const App = () => {
       <NativeRouter>
         <View style={styles.content}>
           <NavList />
-          {
-            routes.map(item => (
-              <Route key={item.path} exact path={item.path} component={item.component} />
-            ))
-          }
+          <View style={styles.wrap}>
+            {
+              routes.map(item => (
+                <Route key={item.path} exact path={item.path} component={item.component} />
+              ))
+            }
+          </View>
         </View>
       </NativeRouter>
     </SafeAreaView>
@@ -32,6 +34,10 @@ const styles = StyleSheet.create({
     backgroundColor: '#eee',
     flex: 1,
     padding: 10
+  },
+  wrap: {
+    backgroundColor: 'white',
+    padding: 15
   }
 })
 

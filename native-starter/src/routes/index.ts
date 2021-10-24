@@ -1,16 +1,16 @@
-import Test00 from '../Test00'
-import Test01 from '../Test01'
+import CoreComponents from '../01-CoreComponents'
+import ScrollView from '../02-ScrollView'
 
 const routes = [
   {
-    name: '测试00',
+    name: '内置组件',
     path: '/',
-    component: Test00,
+    component: CoreComponents,
   },
   {
-    name: '测试01',
-    path: '/test001',
-    component: Test01
+    name: 'scrollView',
+    path: '/02',
+    component: ScrollView
   },
 ]
 

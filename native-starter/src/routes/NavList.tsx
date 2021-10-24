@@ -21,7 +21,7 @@ const NavList = () => {
             style={[styles.btn, pathname === item.path ? styles.active : {}]}
             onPress={() => to(item.path)}
           >
-            <Text style={pathname === item.path ? styles.activeText : {}}>{item.name} {pathname === item.path ? 1 : 0}</Text>
+            <Text style={pathname === item.path ? styles.activeText : {}}>{item.name}</Text>
           </TouchableOpacity>
         ))
       }
