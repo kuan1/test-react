@@ -7,6 +7,9 @@ import {
   Image,
   FlatList,
   SectionList,
+  Button,
+  TouchableWithoutFeedback,
+  TouchableOpacity,
   StyleSheet,
 } from 'react-native'
 
@@ -51,6 +54,14 @@ const Test00 = () => {
           <View style={styles.text}>
             <Text>{text}</Text>
           </View>
+        </View>
+        <View style={styles.item}>
+          <Button title="按钮（ios/android表现不同）" onPress={() => alert('点击')} />
+          <TouchableOpacity onPress={() => alert('container')}>
+            <TouchableWithoutFeedback onPress={() => alert('inner')}>
+              <Text>测试</Text>
+            </TouchableWithoutFeedback>
+          </TouchableOpacity>
         </View>
       </ScrollView>
       <View style={styles.flatContainer}>
